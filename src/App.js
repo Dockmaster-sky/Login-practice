@@ -14,17 +14,23 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true)
   const [letter, setLetter] = useState("N")
 
-  
   useEffect(() => {
-    setLoading(false);
-    onAuthStateChanged(auth, (user) => {
-      console.log(user, "auth state changed");
-      setLetter(user.email[0].toUpperCase())
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+      // setLetter(user.email[0].toUpperCase())
+
     })
+
+    return unsubscribe;
+    // setLoading(false);
+    // onAuthStateChanged(auth, (user) => {
+    //   console.log(user, "auth state changed");
+    // })
   }, [])
 
   function registerNewUser() {
@@ -61,6 +67,7 @@ function App() {
       login={login}
       logout={logout}
       letter={letter}
+      user={user}
       />
       
     </div>
