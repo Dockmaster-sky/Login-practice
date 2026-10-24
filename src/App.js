@@ -21,12 +21,20 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+
+      if (currentUser?.email) {
+        setLetter(currentUser.email[0].toUpperCase());
+      }
+      else {
+        setLetter("N")
+      }
       setLoading(false);
-      // setLetter(user.email[0].toUpperCase())
+      
 
     })
 
     return unsubscribe;
+    // (changed from this to the code above)
     // setLoading(false);
     // onAuthStateChanged(auth, (user) => {
     //   console.log(user, "auth state changed");
