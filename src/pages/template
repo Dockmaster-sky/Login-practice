@@ -1,0 +1,18 @@
+instructions: create the nav bar and have login/ register buttons.
+each button performs the way it should ( you can hard code this for now)
+then have a loading state while waiting for the backend to call, and when you are logged in, 
+have a button that shows a circle with the first letter of the email inside it.
+when you click this button it should log out the user.  happy coding.
+
+
+
+
+import React from 'react'
+
+const Landing = () => {
+  return (
+    <div>Landing</div>
+  )
+}
+
+export default Landing

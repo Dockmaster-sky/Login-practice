@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing__menu {
+  width: 300px;
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  max-width: 1200px;
+  border: 2px solid rgba(128, 128, 128, 0.479);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 12px;
+}
+
+.menu {
+  color: purple;
+  width: 50px;
+  height: 50px;
+}
+
+.bars__link {
+  width: 80px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  min-width: 50px;
+  min-height: 20px;
+  border-radius: 4px;
+  padding: 8px;
+  margin-left: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  background-color: rgba(0, 0, 255, 0.295);
+}
+
+.body {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+}
+
+.purple {
+  color: rgb(154, 68, 235);
+}
+
+.video__box {
+  background-color: rgba(0, 0, 0, 0.863);
+  width: 100%;
+  height: 300px;
+}
+
+.loading {
+    width: 200px;
+    height: 50px;
+    background-color: gray;
+}
+
+.user__button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    font-size: 44px;
 }
